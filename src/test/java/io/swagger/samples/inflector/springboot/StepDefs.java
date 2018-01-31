@@ -103,6 +103,12 @@ public class StepDefs {
         case "Surname":
           assertThat(ur.getSurname(), equalTo(entry.getValue()));
           break;
+        case "GivenName":
+            assertThat(ur.getGivenName().trim(), equalTo(entry.getValue()));
+            break;
+        case "DoB":
+            assertThat(ur.getDoB(), equalTo(entry.getValue()));
+            break;   
         default:
           throw new PendingException("TODO: user details - " + entry.getKey());
         }
